@@ -4,10 +4,10 @@ Nacházíte se v baru, váš život nemá smysl. Rozhodl jste se zabít, ale chc
 
 ## Herní Mechaniky
 
-### **Fire** zmáčkne spoušť: 
+### **Fire** - zmáčkne spoušť: 
 1) Náboj není v komoře - hra pokračuje, přičítá se skóre
 2) Náboj je v komoře - hra končí, hráč umírá
-### **Spin** roztočí válec:
+### **Spin** - roztočí válec:
 1) vybere náhodnou komoru
 
 ## Instalace
