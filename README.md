@@ -1,13 +1,13 @@
 # Ruská Ruleta
 
-Jedná se o jednoduchou hru Ruská ruleta vyvinutou pomocí Pygame. Hra simuluje revolver s jedním nábojem v cylindru, který se před každým kolem otočí. Hráč si může vybrat, zda chce otočit cylindrem nebo zmáčknout spoušť. Pokud je spoušť zmáčknuta a v komoře je náboj, hra končí. Cílem je nasbírat co nejvíce bodů před tím, než padne náboj.
+Nacházíte se v baru, váš život nemá smysl. Rozhodl jste se zabít, ale chcete se na konec života ještě trochu pobavit. Zmáčknete spoušť hned bez váhání, nebo necháte náhodu vybrat komoru která se vám může stát osudnou.
 
 ## Herní Mechaniky
 
-- **Fire** zmáčkne spoušť: 
+### **Fire** zmáčkne spoušť: 
 1) Náboj není v komoře - hra pokračuje, přičítá se skóre
 2) Náboj je v komoře - hra končí, hráč umírá
-- **Spin** roztočí válec:
+### **Spin** roztočí válec:
 1) vybere náhodnou komoru
 
 ## Instalace
