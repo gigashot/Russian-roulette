@@ -98,11 +98,10 @@ def main():
     while running:
         screen.blit(background_image, (0, 0))
         screen.blit(revolver_image, (300, 0))
-
         pygame.draw.rect(screen, GREEN, spin_button)
         pygame.draw.rect(screen, RED, trigger_button)
         draw_text('Spin', font, BLACK, screen, spin_button.centerx, spin_button.centery)
-        draw_text('Trigger', font, BLACK, screen, trigger_button.centerx, trigger_button.centery)
+        draw_text('Fire', font, BLACK, screen, trigger_button.centerx, trigger_button.centery)
 
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
