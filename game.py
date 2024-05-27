@@ -13,12 +13,9 @@ BLACK = (0, 0, 0)
 RED = (150, 0, 0)
 GREEN = (0, 150, 0)
 
-# Set up the screen
+# screen
 screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
 pygame.display.set_caption("Russian Roulette")
-
-# Clock
-clock = pygame.time.Clock()
 
 # Fonts
 font_small = pygame.font.SysFont(None, 35)
@@ -42,7 +39,7 @@ pygame.mixer.music.load('assets/background-music.mp3')
 background_image = pygame.image.load('assets/bar.png')
 background_image = pygame.transform.scale(background_image, (SCREEN_WIDTH, SCREEN_HEIGHT))
 
-# Load and scale revolver image
+# Load n scale revolver
 revolver_image = pygame.image.load('assets/revolver.png')
 revolver_image = pygame.transform.scale(revolver_image, (600, 600))
 
@@ -50,13 +47,13 @@ revolver_image = pygame.transform.scale(revolver_image, (600, 600))
 flash_image = pygame.image.load('assets/flash.png')
 flash_image = pygame.transform.scale(flash_image, (600, 600))
 
-# Load and scale animation frames
+# Load n scale spin animation
 spin_frames = [
     pygame.transform.scale(pygame.image.load(f'assets/spin_{i}.png'), (600, 600))
     for i in range(1, 8)
 ]
 
-#explenation - pygame.display.flip() - removes the previous frame and displays the new frame (or no frame)
+#explanation - pygame.display.flip() - removes the previous frame and displays the new frame (or no frame)
 
 def menu():
     pygame.mixer.music.play(-1)
