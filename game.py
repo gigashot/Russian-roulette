@@ -29,27 +29,27 @@ def draw_text(text, font, color, surface, x, y):
     surface.blit(textobj, textrect)
 
 # Load sound
-bang_sound = pygame.mixer.Sound("Russian-roulette/assets/gunshot.mp3")
-click_sound = pygame.mixer.Sound("Russian-roulette/assets/empty-gun-click.mp3")
-spin_sound = pygame.mixer.Sound("Russian-roulette/assets/revolver-spin.mp3")
-ring_sound = pygame.mixer.Sound("Russian-roulette/assets/ear-ringing-sound.mp3")
-pygame.mixer.music.load("Russian-roulette/assets/background-music.mp3")
+bang_sound = pygame.mixer.Sound("assets/gunshot.mp3")
+click_sound = pygame.mixer.Sound("assets/empty-gun-click.mp3")
+spin_sound = pygame.mixer.Sound("assets/revolver-spin.mp3")
+ring_sound = pygame.mixer.Sound("assets/ear-ringing-sound.mp3")
+pygame.mixer.music.load("assets/background-music.mp3")
 
 # Load images
-background_image = pygame.image.load("Russian-roulette/assets/bar.png")
+background_image = pygame.image.load("assets/bar.png")
 background_image = pygame.transform.scale(background_image, (SCREEN_WIDTH, SCREEN_HEIGHT))
 
 # Load n scale revolver
-revolver_image = pygame.image.load("Russian-roulette/assets/revolver.png")
+revolver_image = pygame.image.load("assets/revolver.png")
 revolver_image = pygame.transform.scale(revolver_image, (600, 600))
 
 # Flash image
-flash_image = pygame.image.load("Russian-roulette/assets/flash.png")
+flash_image = pygame.image.load("assets/flash.png")
 flash_image = pygame.transform.scale(flash_image, (600, 600))
 
 # Load n scale spin animation
 spin_frames = [
-    pygame.transform.scale(pygame.image.load(f"Russian-roulette/assets/spin_{i}.png"), (600, 600))
+    pygame.transform.scale(pygame.image.load(f"assets/spin_{i}.png"), (600, 600))
     for i in range(1, 8)
 ]
 
