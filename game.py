@@ -5,7 +5,8 @@ import sys
 pygame.init()
 
 # Constants
-SCREEN_WIDTH, SCREEN_HEIGHT = 1200, 600
+SCREEN_WIDTH = 1200
+SCREEN_HEIGHT =  600
 
 # Colors
 WHITE = (200, 200, 200)
@@ -18,7 +19,7 @@ screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
 pygame.display.set_caption("Russian Roulette")
 
 # Fonts
-font_small = pygame.font.SysFont(None, 35)
+font_small = pygame.font.SysFont(35)
 font_medium = pygame.font.SysFont(None, 55)
 font_large = pygame.font.SysFont(None, 75)
 
@@ -36,7 +37,7 @@ ring_sound = pygame.mixer.Sound("assets/ear-ringing-sound.mp3")
 pygame.mixer.music.load("assets/background-music.mp3")
 
 # Load images
-background_image = pygame.image.load("assets/bar.png")
+background_image = pygame.image.load("assets/bar1.png")
 background_image = pygame.transform.scale(background_image, (SCREEN_WIDTH, SCREEN_HEIGHT))
 
 # Load n scale revolver
@@ -79,6 +80,7 @@ def animate_spin():
         pygame.display.flip()
         pygame.time.delay(100)
 
+
 def animate_trigger():
     screen.blit(background_image, (0, 0))
     screen.blit(flash_image, (300, 0))
@@ -98,8 +100,10 @@ def main():
     trigger_button = pygame.Rect(750, 500, 200, 50)
 
     while running:
+        
         screen.blit(background_image, (0, 0))
         screen.blit(revolver_image, (300, 0))
+        
         
         pygame.draw.rect(screen, GREEN, spin_button)
         pygame.draw.rect(screen, RED, trigger_button)
@@ -146,16 +150,6 @@ def main():
                     else:
                         click_sound.play()
                         score += 1
-
-        # to keep buttons on screen w/o flashing
-        screen.blit(background_image, (0, 0))
-        screen.blit(revolver_image, (300, 0))
-        pygame.draw.rect(screen, GREEN, spin_button)
-        pygame.draw.rect(screen, RED, trigger_button)
-        draw_text("Spin", font_medium, BLACK, screen, spin_button.centerx, spin_button.centery)
-        draw_text("Fire", font_medium, BLACK, screen, trigger_button.centerx, trigger_button.centery)
-        draw_text(f"Score: {score}", font_small, GREEN, screen, SCREEN_WIDTH // 10, SCREEN_HEIGHT // 10)
-        pygame.display.flip()
 
 if __name__ == "__main__":
     menu()
