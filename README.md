@@ -27,7 +27,7 @@ všechny sprity a pozadí jsou moje vlastní:
 - Frames animace roztočení: `spin_1.png` až `spin_7.png`
 - Obrázek záblesku: `flash.png`
 
-- Zvukové efekty (stáhnuté z pixabay.com):
+- Zvukové efekty (stáhnuté z [pixabay.com]https://pixabay.com/cs/):
   - `gunshot.mp3`
   - `empty-gun-click.mp3`
   - `revolver-spin.mp3`
