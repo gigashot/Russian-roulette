@@ -91,7 +91,7 @@ def animate_trigger():
 def main():
     running = True
     score = 0
-    cylinder = [0, 0, 0, 0, 0, 0]
+    cylinder = [0, 0, 0, 0, 0, 1]
     random.shuffle(cylinder)
 
     spin_button = pygame.Rect(250, 500, 200, 50)
@@ -129,7 +129,7 @@ def main():
                 if spin_button.collidepoint(event.pos):
                     spin_sound.play()
                     animate_spin()
-                    cylinder = [0, 0, 0, 0, 0, 0]
+                    cylinder = [0, 0, 0, 0, 0, 1]
                     random.shuffle(cylinder)
                 elif trigger_button.collidepoint(event.pos):
                     if cylinder.pop() == 1:
